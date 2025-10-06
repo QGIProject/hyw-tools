@@ -114,16 +114,16 @@ let isDeleting = false
 let typingSpeed = 150
 let deletingSpeed = 100
 let pauseTime = 2000
-let timeoutId: NodeJS.Timeout | null = null
+let timeoutId: number | null = null
 let currentText = ''
 
-const getRandomText = () => {
+const getRandomText = (): string => {
   // 80%概率显示正常的"何意味"，20%概率显示特殊文字
   if (Math.random() < 0.8) {
-    return normalTexts[0]
+    return normalTexts[0] || '何意味'
   } else {
     const randomIndex = Math.floor(Math.random() * specialTexts.length)
-    return specialTexts[randomIndex]
+    return specialTexts[randomIndex] || '何意味'
   }
 }
 
