@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon配色方案选择</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .color-scheme {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .favicon-preview {
+            width: 32px;
+            height: 32px;
+            margin-right: 15px;
+            border-radius: 4px;
+        }
+        .scheme-info {
+            flex: 1;
+        }
+        .scheme-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .colors {
+            display: flex;
+            gap: 5px;
+            margin-top: 5px;
+        }
+        .color-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+        }
+        .description {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 Favicon配色方案</h1>
+
+    <div class="color-scheme">
+        <svg class="favicon-preview" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="sunset" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#FFE66D;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <circle cx="16" cy="16" r="14" fill="url(#sunset)"/>
+            <text x="16" y="22" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">?</text>
+        </svg>
+        <div class="scheme-info">
+            <div class="scheme-name">🌅 日落橙黄</div>
+            <div class="description">温暖活泼，橙红到黄色的渐变，给人阳光活力的感觉</div>
+            <div class="colors">
+                <div class="color-dot" style="background: #FF6B6B;"></div>
+                <div class="color-dot" style="background: #FFE66D;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="color-scheme">
+        <svg class="favicon-preview" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="ocean" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#006BA6;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#0496FF;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <circle cx="16" cy="16" r="14" fill="url(#ocean)"/>
+            <text x="16" y="22" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">?</text>
+        </svg>
+        <div class="scheme-info">
+            <div class="scheme-name">🌊 深海蓝</div>
+            <div class="description">专业可靠，深蓝到亮蓝的渐变，适合工具类网站</div>
+            <div class="colors">
+                <div class="color-dot" style="background: #006BA6;"></div>
+                <div class="color-dot" style="background: #0496FF;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="color-scheme">
+        <svg class="favicon-preview" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="forest" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#2D6A4F;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#52B788;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <circle cx="16" cy="16" r="14" fill="url(#forest)"/>
+            <text x="16" y="22" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">?</text>
+        </svg>
+        <div class="scheme-info">
+            <div class="scheme-name">🌲 森林绿</div>
+            <div class="description">自然清新，深绿到浅绿的渐变，给人安心感</div>
+            <div class="colors">
+                <div class="color-dot" style="background: #2D6A4F;"></div>
+                <div class="color-dot" style="background: #52B788;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="color-scheme">
+        <svg class="favicon-preview" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="berry" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#7209B7;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#F72585;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <circle cx="16" cy="16" r="14" fill="url(#berry)"/>
+            <text x="16" y="22" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">?</text>
+        </svg>
+        <div class="scheme-info">
+            <div class="scheme-name">🫐 浆果紫</div>
+            <div class="description">神秘优雅，深紫到粉红的渐变，现代感强</div>
+            <div class="colors">
+                <div class="color-dot" style="background: #7209B7;"></div>
+                <div class="color-dot" style="background: #F72585;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="color-scheme">
+        <svg class="favicon-preview" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="fire" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#DC2F02;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#F48C06;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <circle cx="16" cy="16" r="14" fill="url(#fire)"/>
+            <text x="16" y="22" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">?</text>
+        </svg>
+        <div class="scheme-info">
+            <div class="scheme-name">🔥 火焰橙</div>
+            <div class="description">激情活力，深橙到金黄的渐变，很有冲击力</div>
+            <div class="colors">
+                <div class="color-dot" style="background: #DC2F02;"></div>
+                <div class="color-dot" style="background: #F48C06;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="color-scheme">
+        <svg class="favicon-preview" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="monochrome" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#212529;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#495057;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <circle cx="16" cy="16" r="14" fill="url(#monochrome)"/>
+            <text x="16" y="22" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">?</text>
+        </svg>
+        <div class="scheme-info">
+            <div class="scheme-name">⚫ 极简黑白</div>
+            <div class="description">简洁专业，黑到灰的渐变，百搭经典</div>
+            <div class="colors">
+                <div class="color-dot" style="background: #212529;"></div>
+                <div class="color-dot" style="background: #495057;"></div>
+            </div>
+        </div>
+    </div>
+
+    <h2>选择说明</h2>
+    <p>告诉我你喜欢哪个配色方案，我会为你更新favicon。你也可以要求：</p>
+    <ul>
+        <li>调整某个方案的深浅度</li>
+        <li>修改颜色搭配</li>
+        <li>提供其他配色建议</li>
+    </ul>
+</body>
+</html>

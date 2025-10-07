@@ -1,104 +1,40 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300 flex flex-col">
     <!-- Hero Section -->
-    <div class="hero min-h-[80vh]">
+    <div class="hero flex-1">
       <div class="hero-content text-center">
         <div class="max-w-2xl">
           <!-- Typing Effect -->
           <div class="mb-6">
-            <h1 class="text-6xl md:text-7xl font-bold mb-4">
-              <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                <span class="typed-text">{{ typedText }}</span>
-                <span class="cursor">|</span>
-              </span>
-              <span class="text-4xl md:text-5xl ml-2 text-gray-700">工具站</span>
+            <!-- 优化后的标题 -->
+            <h1 class="text-center font-bold mb-4">
+              <div class="inline-flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
+                <span class="bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+                  <span class="typed-text inline-block text-center">{{ typedText }}</span>
+                  <span class="cursor">|</span>
+                </span>
+                <span class="text-3xl sm:text-4xl md:text-5xl text-gray-700 dark:text-gray-300">工具站</span>
+              </div>
             </h1>
           </div>
           <p class="text-xl text-base-content/80 mb-8">
             一个集成多种实用工具的在线工具箱，为您提供便捷的日常工具服务
           </p>
           <div class="space-x-4">
-            <button class="btn btn-primary btn-lg">开始使用</button>
-            <button class="btn btn-outline btn-lg">了解更多</button>
+            <router-link to="/tools" class="btn btn-primary btn-lg">开始使用</router-link>
+            <router-link to="/about" class="btn btn-outline btn-lg">了解更多</router-link>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Tools Section -->
-    <div class="container mx-auto px-4 py-16">
-      <h2 class="text-3xl font-bold text-center mb-12">热门工具</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-          <div class="card-body">
-            <h3 class="card-title">
-              <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center text-white">🔧</div>
-              工具名称
-            </h3>
-            <p>这是一个工具的简短描述，介绍它的功能和用途。</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">使用工具</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-          <div class="card-body">
-            <h3 class="card-title">
-              <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center text-white">📝</div>
-              工具名称
-            </h3>
-            <p>这是一个工具的简短描述，介绍它的功能和用途。</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">使用工具</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-          <div class="card-body">
-            <h3 class="card-title">
-              <div class="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center text-white">🎨</div>
-              工具名称
-            </h3>
-            <p>这是一个工具的简短描述，介绍它的功能和用途。</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">使用工具</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Features Section -->
-    <div class="bg-base-200 py-16">
+    <!-- 页脚 -->
+    <footer class="mt-auto py-8 text-center text-base-content/60">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">为什么选择我们？</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="text-center">
-            <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-2xl">⚡</span>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">快速便捷</h3>
-            <p class="text-base-content/70">无需注册，即开即用，提供流畅的使用体验</p>
-          </div>
-          <div class="text-center">
-            <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-2xl">🔒</span>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">安全可靠</h3>
-            <p class="text-base-content/70">所有数据处理都在本地完成，保护您的隐私安全</p>
-          </div>
-          <div class="text-center">
-            <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-2xl">🆓</span>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">完全免费</h3>
-            <p class="text-base-content/70">所有工具完全免费使用，没有任何隐藏费用</p>
-          </div>
-        </div>
+        <p>&copy; 2024 何意味工具站. All rights reserved.</p>
+        <p class="mt-2 text-sm">🛠️ 为您提供便捷的在线工具服务</p>
       </div>
-    </div>
+    </footer>
   </div>
 </template>
 
@@ -182,9 +118,17 @@ onUnmounted(() => {
   51%, 100% { opacity: 0; }
 }
 
+/* 简化的打字文字样式 */
 .typed-text {
-  display: inline-block;
-  min-width: 280px; /* 增加宽度以容纳更长的特殊文字 */
-  text-align: left;
+  max-width: 200px; /* 限制最大宽度 */
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+/* 小屏幕优化 */
+@media (max-width: 640px) {
+  .typed-text {
+    max-width: 150px; /* 手机端减少宽度 */
+  }
 }
 </style>

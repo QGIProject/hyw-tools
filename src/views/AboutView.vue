@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+  <div class="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
     <div class="container mx-auto px-4 py-16">
       <!-- Header Section -->
       <div class="text-center mb-16">
@@ -77,7 +77,7 @@
         </p>
         <div class="space-x-4">
           <button class="btn btn-primary">发送邮件</button>
-          <button class="btn btn-outline">GitHub</button>
+          <a href="https://github.com/QGIProject/hyw-tools" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>
         </div>
       </div>
     </div>
