@@ -1,5 +1,11 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300 flex flex-col">
+    <!-- 生日公告弹窗 -->
+    <BirthdayAnnouncement
+      :show="showBirthdayModal"
+      @close="handleBirthdayModalClose"
+    />
+
     <!-- Hero Section -->
     <div class="hero flex-1">
       <div class="hero-content text-center">
@@ -40,8 +46,10 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import BirthdayAnnouncement from '@/components/BirthdayAnnouncement.vue'
 
 const typedText = ref('')
+const showBirthdayModal = ref(false)
 const normalTexts = ['何意味']
 const specialTexts = ['ohno妈咪何意味', '救命何意味', '好康何意味', '这是什么何意味']
 let charIndex = 0
@@ -96,8 +104,22 @@ const typeEffect = () => {
   }
 }
 
+// 检查是否在生日期间（显示到2025年10月10日0点中国标准时间）
+const isBirthdayPeriod = (): boolean => {
+  const now = new Date()
+  const endDate = new Date('2025-10-10T00:00:00+08:00') // 2025年10月10日0点中国标准时间
+  return now < endDate
+}
+
 onMounted(() => {
   typeEffect()
+
+  // 检查是否在生日期间，如果是则显示生日弹窗
+  if (isBirthdayPeriod()) {
+    setTimeout(() => {
+      showBirthdayModal.value = true
+    }, 1000)
+  }
 })
 
 onUnmounted(() => {
@@ -105,6 +127,11 @@ onUnmounted(() => {
     clearTimeout(timeoutId)
   }
 })
+
+// 处理生日弹窗关闭事件
+const handleBirthdayModalClose = () => {
+  showBirthdayModal.value = false
+}
 </script>
 
 <style scoped>
