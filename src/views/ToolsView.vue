@@ -141,14 +141,14 @@
               v-for="category in toolCategories.slice(0, 3)"
               :key="category.id"
               class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow cursor-pointer"
-              @click="selectTool(category.tools[0])"
+              @click="category.tools[0] && selectTool(category.tools[0])"
             >
-              <div class="text-3xl mb-4">{{ category.tools[0].icon }}</div>
+              <div class="text-3xl mb-4">{{ category.tools[0]?.icon }}</div>
               <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                {{ category.tools[0].name }}
+                {{ category.tools[0]?.name }}
               </h3>
               <p class="text-sm text-gray-600 dark:text-gray-400">
-                {{ category.tools[0].description }}
+                {{ category.tools[0]?.description }}
               </p>
             </div>
           </div>
@@ -272,8 +272,11 @@ const selectToolById = (toolId: string) => {
 
 onMounted(() => {
   // 默认选择第一个工具
-  if (toolCategories.length > 0 && toolCategories[0].tools.length > 0) {
-    selectTool(toolCategories[0].tools[0])
+  if (toolCategories.length > 0 && toolCategories[0]?.tools && toolCategories[0].tools.length > 0) {
+    const firstTool = toolCategories[0].tools[0]
+    if (firstTool) {
+      selectTool(firstTool)
+    }
   }
 })
 </script>

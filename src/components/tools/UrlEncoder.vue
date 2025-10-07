@@ -112,7 +112,7 @@
         <button
           v-for="testUrl in testUrls"
           :key="testUrl.name"
-          @click="testUrl.text = testUrl.url"
+          @click="originalText = testUrl.url"
           class="p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors text-left"
         >
           <div class="font-medium text-gray-800 dark:text-gray-200">{{ testUrl.name }}</div>

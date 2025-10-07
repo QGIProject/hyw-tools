@@ -82,7 +82,7 @@
             >
             <div class="absolute right-2 top-1/2 transform -translate-y-1/2 flex space-x-1">
               <button
-                @click="copyPassword"
+                @click="() => copyPassword()"
                 :disabled="!generatedPassword"
                 class="px-3 py-1 text-sm bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 text-white rounded transition-colors"
               >
@@ -146,7 +146,7 @@
             {{ password }}
           </span>
           <button
-            @click="copyPassword(password)"
+            @click="() => copyPassword(password)"
             class="px-2 py-1 text-xs bg-blue-500 hover:bg-blue-600 text-white rounded transition-colors"
           >
             复制
