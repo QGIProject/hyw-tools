@@ -55,9 +55,9 @@ const specialTexts = ['ohno妈咪何意味', '救命何意味', '好康何意味
 let charIndex = 0
 let textIndex = 0
 let isDeleting = false
-let typingSpeed = 150
-let deletingSpeed = 100
-let pauseTime = 2000
+const typingSpeed = 150
+const deletingSpeed = 100
+const pauseTime = 2000
 let timeoutId: number | null = null
 let currentText = ''
 
