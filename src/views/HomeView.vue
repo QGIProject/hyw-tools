@@ -107,7 +107,7 @@ const typeEffect = () => {
 // 检查是否在生日期间（显示到2025年10月10日0点中国标准时间）
 const isBirthdayPeriod = (): boolean => {
   const now = new Date()
-  const endDate = new Date('2025-10-10T00:00:00+08:00') // 2025年10月10日0点中国标准时间
+  const endDate = new Date('2025-12-03T00:00:00+08:00') // 2025年10月10日0点中国标准时间
   return now < endDate
 }
 

@@ -33,7 +33,7 @@
 
             <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
               祝我们最最最可爱的<br>
-              <span class="text-xl font-semibold text-pink-500 dark:text-pink-400">何意味妈咪kumo</span><br>
+              <span class="text-xl font-semibold text-pink-500 dark:text-pink-400">星野大神</span><br>
               生日快乐！🎉
             </p>
 
